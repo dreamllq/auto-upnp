@@ -50,7 +50,7 @@ export async function mapPorts(
           host: localIP
         },
         protocol: protocolUpper,
-        description: 'auto-upnp'
+        description: `auto-upnp-${internalPort}-${protocolUpper}`
       });
     }
 
