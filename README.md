@@ -5,23 +5,25 @@
 ## 安装
 
 ```bash
+# 全局安装
+npm install -g auto-upnp
+
+# 或本地开发
+git clone https://github.com/dreamllq/auto-upnp.git
+cd auto-upnp
 npm install
-```
-
-## 构建
-
-```bash
 npm run build
+npm link
 ```
 
 ## 使用
 
 ```bash
 # 单端口映射
-node dist/index.js -p 8080:80/tcp
+auto-upnp -p 8080:80/tcp
 
 # 多端口映射
-node dist/index.js -p 8080:80/tcp -p 3000:3000/udp
+auto-upnp -p 8080:80/tcp -p 3000:3000/udp
 ```
 
 ### 参数格式
@@ -41,7 +43,7 @@ node dist/index.js -p 8080:80/tcp -p 3000:3000/udp
 crontab -e
 
 # 添加定时任务
-*/10 * * * * /path/to/auto-upnp/node dist/index.js -p 8080:80/tcp
+*/10 * * * * auto-upnp -p 8080:80/tcp
 ```
 
 ## 退出码

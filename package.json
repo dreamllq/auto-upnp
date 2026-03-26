@@ -4,8 +4,15 @@
   "description": "自动注册本机到光猫的upnp",
   "type": "module",
   "main": "dist/index.js",
+  "bin": {
+    "auto-upnp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm",
+    "build": "tsup src/index.ts --format esm --shebang",
     "dev": "tsup src/index.ts --format esm --watch"
   },
   "repository": {
@@ -13,8 +20,8 @@
     "url": "git+https://github.com/dreamllq/auto-upnp.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "llq",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dreamllq/auto-upnp/issues"
   },
